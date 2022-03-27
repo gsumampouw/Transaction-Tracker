@@ -1,0 +1,15 @@
+.centerpage{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.forms{
+    display: flex;
+    justify-content: center;
+} 
+
+@media only screen and (max-width: 600px){
+   .forms{
+       display: block;
+   }
+}

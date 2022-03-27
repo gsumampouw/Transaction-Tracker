@@ -1,0 +1,22 @@
+.card{
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    background-color: #212529;
+    margin: 1em;
+    border-radius: 10px;
+    width: 50%;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px){
+    .card{
+        box-shadow: 0 4px 8px rgba(0,0,0,.3);
+        background-color: #212529;
+        margin: 1em;
+        border-radius: 10px;
+        width: 600px;
+    }
+
+    
+}
+
+

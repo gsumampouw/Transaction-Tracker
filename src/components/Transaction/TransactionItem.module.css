@@ -1,0 +1,9 @@
+.expense{
+    display: flex;
+    justify-content: space-between;
+    background-color: #212529;
+    color: white;
+    padding: .5em;
+    margin: 1em;
+    border-radius: 8px;
+}
