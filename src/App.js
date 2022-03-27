@@ -9,6 +9,7 @@ function App() {
   return (
     <div>
       <Navigation />
+      <h1>Test</h1>
      <TransactionTracker />
     </div>
   );
