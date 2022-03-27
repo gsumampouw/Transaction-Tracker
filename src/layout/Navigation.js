@@ -8,10 +8,10 @@ function Navigation (){
         <nav className={Classes.nav}>
             <ul className={Classes.ul}>
                 <li className={Classes.li}>
-                   <Link to='/'>About</Link>
+                   <a href='https://gsumampouw.github.io/'>About</a>
                 </li>
                 <li className={Classes.li}>
-                   <Link to='/TransactionTracker'>Transaction Tracker</Link>
+                <a href='https://gsumampouw.github.io/Transaction-Tracker/'>TransactionTracker</a>
                 </li>
             </ul>
         </nav>
