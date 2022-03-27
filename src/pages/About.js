@@ -21,9 +21,9 @@ function About() {
         </div>
         <div className="">
           <h1 className="text-success">Gaby Sumampouw</h1>
-          <p className="p-4 text-start">
+          <p className="p-5 text-start">
             I am a software development graduate with fundamental skills in
-            Java, SQL, unit testing, Git, and basic web development. Seeking a
+            Java, SQL, unit testing, Git, Javascript, React, HTML and CSS. Seeking a
             full-time entry-level position. A former environmental engineer with
             experience coordinating multiple teams as a liaison. Able to take
             initiative in learning and solving problems independently as well as
@@ -100,8 +100,8 @@ function About() {
                   </div>
                   <div className={Classes.cardtext}>
                     <p className="card-text text-start">
-                      This project utilizes HTML, Bootstrap, React and CSS to
-                      create a responsive portfolio page.
+                      This project utilizes HTML, Bootstrap, and CSS to
+                      create this responsive portfolio page.
                     </p>
                   </div>
                 </div>
@@ -109,14 +109,6 @@ function About() {
                   <li className="list-group-item text-success h4">HTML</li>
                   <li className="list-group-item text-success h4">Bootstrap</li>
                   <li className="list-group-item text-success h4">CSS</li>
-                  <li className="list-group-item text-success h4">
-                    <a
-                      href="https://github.com/gsumampouw/gsumampouw.github.io.git"
-                      className="btn btn-dark"
-                    >
-                      <i className="bi bi-github"></i> Github
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -140,7 +132,7 @@ function About() {
                   </div>
                   <div className={Classes.cardtext}>
                     <p className="card-text text-start">
-                      This project showcases skills in web development, and a front end framework. 
+                      This project showcases skills in web development and a front end framework. The application allows users to add and remove transactions while graphing the data using a charts library. 
                     </p>
                   </div>
                 </div>

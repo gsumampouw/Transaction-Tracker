@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import Classes from './NewTransaction.module.css';
 
 function NewTransaction(props) {
+  const [isValid,setIsValid] = useState(true);
+
   const dateInputRef = useRef();
   const typeInputRef = useRef();
   const descriptionInputRef = useRef();
@@ -56,15 +58,15 @@ function NewTransaction(props) {
         </div>
         <div className={Classes.inputs}>
             <label htmlFor="description">Description</label>
-            <input type= "text" id="description" ref={descriptionInputRef}></input>
+            <input type= "text" id="description" placeholder="Netflix" ref={descriptionInputRef}></input>
         </div>
         <div className={Classes.inputs}>
-            <label htmlFor="amount">Amount</label>
-            <input type="text" id="amount" ref={amountInputRef}></input>
+            <label htmlFor="amount">Amount ($)</label>
+            <input type="text" id="amount" placeholder="1000.00"  ref={amountInputRef}></input>
         </div>
         <div className={Classes.inputs}>
             <label htmlFor="card">Card</label>
-            <input type="text" id="card" ref={cardInputRef}></input>
+            <input type="text" id="card" placeholder="Visa"ref={cardInputRef}></input>
         </div >
         <div className={Classes.addButton}>
         <button className={Classes.button}>Add</button>

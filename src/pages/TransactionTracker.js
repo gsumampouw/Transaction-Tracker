@@ -50,15 +50,19 @@ function TransactionTracker() {
 
 
   return (
-    <div>
+    <section>
+      <section className={classes.about}>
+      <h1 className={classes.centerpage}>Transaction Tracker</h1>
+      </section>
+
+      <div className={classes.centerpage}>
+        {loadTableData(Transaction)}
+        <BarCharts data={AmountTableData} />
+      </div>
       <div className={classes.forms}>
         <Card>
           <NewTransaction onSubmit={onNewTransactionAdded} />
         </Card>
-      </div>
-      <div className={classes.centerpage}>
-        {loadTableData(Transaction)}
-        <BarCharts data={AmountTableData} />
       </div>
       <h1 className={classes.centerpage}>Transactions</h1>
       <div className={classes.centerpage}>
@@ -67,7 +71,7 @@ function TransactionTracker() {
           onDelete={onDeleteHandler}
         />
       </div>
-    </div>
+    </section>
   );
 }
 

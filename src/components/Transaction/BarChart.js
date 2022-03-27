@@ -9,7 +9,7 @@ function BarCharts(props){
           height={300}
           data={props.data}
           margin={{
-            top: 5,
+            top: 20,
             right: 30,
             left: 20,
             bottom: 5,
