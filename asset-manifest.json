@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/Transaction-Tracker/static/css/main.d51d74da.css",
-    "main.js": "/Transaction-Tracker/static/js/main.12ee6ec1.js",
+    "main.css": "/Transaction-Tracker/static/css/main.146eeec8.css",
+    "main.js": "/Transaction-Tracker/static/js/main.e4df80aa.js",
+    "static/media/bootstrap-icons.woff?": "/Transaction-Tracker/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
+    "static/media/bootstrap-icons.woff2?": "/Transaction-Tracker/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
     "index.html": "/Transaction-Tracker/index.html",
-    "main.d51d74da.css.map": "/Transaction-Tracker/static/css/main.d51d74da.css.map",
-    "main.12ee6ec1.js.map": "/Transaction-Tracker/static/js/main.12ee6ec1.js.map"
+    "main.146eeec8.css.map": "/Transaction-Tracker/static/css/main.146eeec8.css.map",
+    "main.e4df80aa.js.map": "/Transaction-Tracker/static/js/main.e4df80aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.d51d74da.css",
-    "static/js/main.12ee6ec1.js"
+    "static/css/main.146eeec8.css",
+    "static/js/main.e4df80aa.js"
   ]
 }
