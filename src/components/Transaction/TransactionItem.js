@@ -1,19 +1,40 @@
 import classes from'./TransactionItem.module.css';
-import Card from '../Card.js';
-import { Button } from 'bootstrap';
+import Card from "../Card"
 
+function TransactionItem (props){
+    let data = props.data;
+    function onDelete(id){
+        props.onDelete(id);
 
-function TransactionItem (prop){
+    }
+    const transactionItem = data.map((transaction)=>{
     return(
-<div className={classes.expense}>
-    <h3>{prop.date}</h3>
-    <h3>{prop.type}</h3>
-    <h3>{prop.description}</h3>
-    <h3>${prop.amount}</h3>
-    <button className='classes.button'>Delete</button>
-</div>
-    );
 
+<Card  key={transaction.id}>
+    <div className={classes.transactionMobile}> 
+    <div>
+    Date <h5>{transaction.date.toDateString()}</h5>
+    </div>
+    <div>
+    Type <h5>{transaction.type}</h5>
+    </div>
+    <div>
+    Amount 
+    <h5>${transaction.amount}</h5>
+    </div>
+    <div className={classes.right}>
+    <button className={classes.button} onClick={() => onDelete(transaction.id)}>Delete</button></div>
+    </div>
+    
+</Card>
+    );
+});
+
+return(
+<div className={classes.cardWidth}>
+    {transactionItem}
+</div>
+);
 }
 
 export default TransactionItem;

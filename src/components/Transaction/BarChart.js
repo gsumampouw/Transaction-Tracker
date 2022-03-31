@@ -2,8 +2,9 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 
 function BarCharts(props){
 
+
     return(
-        <ResponsiveContainer width="80%" aspect={3}>
+        <ResponsiveContainer width="100%" aspect={3}>
         <BarChart
           width={500}
           height={300}

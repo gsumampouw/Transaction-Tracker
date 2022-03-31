@@ -1,20 +1,7 @@
-import TransactionItem from "./TransactionItem";
 import classes from"./TransactionTable.module.css";
 
 function TransactionTable(props) {
   let data = props.data;
-  const item = data.map((transaction) => {
-    return (
-      <TransactionItem
-        key={transaction.id}
-        date={transaction.date.toDateString()}
-        type={transaction.type}
-        description={transaction.description}
-        amount={transaction.amount}
-        card={transaction.card}
-      />
-    );
-  });
 
 function onDelete(id){
   props.onDelete(id);

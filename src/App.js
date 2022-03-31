@@ -1,8 +1,7 @@
 import "./App.css";
+import Footer from "./layout/Footer";
 
 import Navigation from "./layout/Navigation";
-
-import About from "./pages/About";
 import TransactionTracker from "./pages/TransactionTracker";
 
 function App() {
@@ -10,6 +9,7 @@ function App() {
     <div>
       <Navigation />
      <TransactionTracker />
+     <Footer/>
     </div>
   );
 }

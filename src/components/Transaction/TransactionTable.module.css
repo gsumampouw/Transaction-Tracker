@@ -1,5 +1,5 @@
 .ExpenseTable {
-  width: 100%;
+  width: 90%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -12,8 +12,10 @@ h3{
   
 table {
   border: 2px solid #198754;
-  width: 100%;
+  width: 90%;
   height: 200px;
+  margin:auto;
+  font-size: medium;
 }
   
 th {
@@ -34,4 +36,24 @@ td button{
   color: white;
   border-radius: 3px;
   box-shadow: 0 4px 8px rgba(0,0,0,.3);
+}
+
+@media only screen and (max-width:700){
+  table {
+    border: 2px solid #198754;
+    width: 90%;
+    height: auto;
+    margin:auto;
+    font-size: 10px;
+  }
+
+  td {
+    text-align: center;
+    padding: 1px;
+    font-size: 10px;
+  }
+  th{
+    font-size: 10px;
+  }
+  
 }

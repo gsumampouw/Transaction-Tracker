@@ -1,9 +1,24 @@
-.expense{
-    display: flex;
+.transactionMobile{
+    display: block;
     justify-content: space-between;
-    background-color: #212529;
     color: white;
     padding: .5em;
     margin: 1em;
-    border-radius: 8px;
+    width: 90%;
+
+}
+.button{
+    background-color: #198754;
+    border: #198754;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+}
+
+.right{
+    text-align: right;
+}
+
+.cardWidth{
+    width:100%;
 }

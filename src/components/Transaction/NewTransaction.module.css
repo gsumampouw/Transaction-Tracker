@@ -3,6 +3,11 @@
     width: 70%;
 }
 
+label{
+    color: white;
+
+}
+
 .inputs input{
     border-radius: 4px;
     margin-left: 5px;
@@ -42,20 +47,43 @@
     border-color: lightgreen;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 600px){
+    .form{
+        margin: auto;
+        width: 90%;
+
+    }
     
-.inputs input{
+    .inputs input{
     border-radius: 4px;
-    margin-left: 5px;
+    display: block;
+    width: 90%;
+    margin: auto;
 } 
 
+.select{
+    border-radius: 4px;
+    display: block;
+    width: 90%;
+    margin: auto;
+}
 
 .inputs {
-    margin: 5px;
-    display:flex;
-    justify-content: space-between;
+    display:block;
+    justify-content: center;
      
   }
+
+label{
+    color: white;
+    display:block;
+    text-align: center;
+
+
+}
+
+
+
 
 
 .addButton{

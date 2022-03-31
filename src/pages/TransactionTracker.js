@@ -1,23 +1,35 @@
-
 import Card from "../components/Card";
 import classes from "./TransactionTracker.module.css";
 import BarCharts from "../components/Transaction/BarChart";
 import TransactionTable from "../components/Transaction/TransactionTable";
+import TransactionItem from "../components/Transaction/TransactionItem";
 import NewTransaction from "../components/Transaction/NewTransaction";
 import { useState } from "react";
-import {data} from "../TransactionData.js";
+import { data } from "../TransactionData.js";
+import { useEffect } from "react";
 
 function TransactionTracker() {
   const [Transaction, SetTransaction] = useState(data);
-  let AmountTableData = new Array();
-  function onNewTransactionAdded(newTransaction) {
+  const [size, setSize] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener('resize', checkSize);
+    return () => {
+      window.removeEventListener('resize', checkSize);
+    };
+  });
+  let AmountTableData = new Array([]);
 
+function checkSize(){
+  setSize(window.innerWidth);
+}
+
+  function onNewTransactionAdded(newTransaction) {
     const newData = [newTransaction, ...Transaction];
     SetTransaction(newData);
   }
 
   function onDeleteHandler(ID) {
-   let edited = Transaction.filter((transaction)=> transaction.id !== ID);
+    let edited = Transaction.filter((transaction) => transaction.id !== ID);
     SetTransaction(edited);
   }
 
@@ -39,7 +51,7 @@ function TransactionTracker() {
 
     const ammountKeys = Array.from(ammountTable.keys());
     const ammountValues = Array.from(ammountTable.values());
-    const newAmountTable = new Array();
+    const newAmountTable = new Array([]);
 
     for (let i = 0; i < ammountKeys.length; i++) {
       let dataObject = { type: ammountKeys[i], amount: ammountValues[i] };
@@ -48,16 +60,15 @@ function TransactionTracker() {
     AmountTableData = newAmountTable;
   }
 
-
   return (
     <section>
       <section className={classes.about}>
-      <h1 className={classes.centerpage}>Transaction Tracker</h1>
+        <h1 className={classes.centerpage}>Transaction Tracker</h1>
       </section>
 
       <div className={classes.centerpage}>
         {loadTableData(Transaction)}
-        <BarCharts data={AmountTableData} />
+        <BarCharts size={size} data={AmountTableData} />
       </div>
       <div className={classes.forms}>
         <Card>
@@ -65,12 +76,11 @@ function TransactionTracker() {
         </Card>
       </div>
       <h1 className={classes.centerpage}>Transactions</h1>
+
       <div className={classes.centerpage}>
-        <TransactionTable
-          data={Transaction}
-          onDelete={onDeleteHandler}
-        />
+      {size<700 ? <TransactionItem data={Transaction} onDelete={onDeleteHandler} /> : <TransactionTable data={Transaction} onDelete={onDeleteHandler}/> }
       </div>
+     
     </section>
   );
 }
